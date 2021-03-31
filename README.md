@@ -1,12 +1,13 @@
 # Artificial-Intelligence-Algorithms-for-Video-Games
-CSSE Final Year Project
+## CSSE Final Year Project
+
 **Prerequisites:**
 1. Install Python 3: https://www.python.org/downloads/
 2. Install Pygame: pip install pygame
 3. Install Numpy: pip install numpy
 
 
-**HOW TO PLAY GAMES: **
+**HOW TO PLAY GAMES:**
 supporting -> mcts_games -> MCTS games.exe   OR
 main.py (line 62) -> uncomment mode = Modes.PLAY  -> Run
 
