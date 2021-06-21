@@ -1,5 +1,5 @@
-# Artificial-Intelligence-Algorithms-for-Video-Games
-## CSSE Final Year Project
+# MCTS-for-Video-Games
+## Maynooth University CSSE course Final Year Project
 
 **Prerequisites:**
 1. Install Python 3: https://www.python.org/downloads/
