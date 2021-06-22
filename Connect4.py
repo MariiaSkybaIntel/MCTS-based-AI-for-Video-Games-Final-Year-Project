@@ -11,7 +11,7 @@ from UCT import UCT
 class Connect4(Game, GameGUIInterface):
 	""" Connect4 is played on 6x7 board arranges as below
 
-	  col:    0  1  2  3  4  5  6 
+	  col:    0  1  2  3  4  5  6
   row: 0   [[ 0  0  0  0  0  0  0]
 	   1    [ 0  0  0  0  0  0  0]
 	   2    [ 0  0  0  0  0  0  0]
@@ -222,6 +222,7 @@ class Connect4(Game, GameGUIInterface):
 		elif cell == 54: return [x_col4, y_row5]
 		elif cell == 55: return [x_col5, y_row5]
 		elif cell == 56: return [x_col6, y_row5]
+		else: return None
 
 	def _get_lowest_row_with_free_cell(self, column):
 		column_values = self.board[:,column]
@@ -261,7 +262,20 @@ class Connect4(Game, GameGUIInterface):
 		else:
 			screen.blit(AIWinner.convert_alpha(), (370, 30))
 			screen.blit(humanLoser.convert_alpha(), (80, 50))
-			screen.blit(AI_WON_LABEL.convert_alpha(),(232,30))		
+			screen.blit(AI_WON_LABEL.convert_alpha(),(232,30))
+			
+	def _display_board_updates(self, screen):
+		cell = 0
+		for row in range(0, C4_ROWS):
+			for col in range(0, C4_COLS):				
+				if self.board[row][col] == 1:
+					screen.blit(C4_RED_MOON_BIT, self._get_top_left_cell_coords(cell))
+				elif self.board[row][col] == 2:
+					screen.blit(C4_YELLOW_MOON_BIT, self._get_top_left_cell_coords(cell))
+				cell += 1
+			cell = 0
+			cell = cell+(row+1)*10 #go to next row
+		pg.display.update()
 
 	def draw_game_screen(self, screen, gameLevel, audio_muted, set_caption):
 		#increase screen size and display background image
@@ -373,6 +387,7 @@ class Connect4(Game, GameGUIInterface):
 					elif self.close_game_info_btn_clicked(x, y):
 						game_info_visible = False
 						self.draw_game_screen(screen, gameLevel, audio_muted, set_caption = False)
+						self._display_board_updates(screen)
 				elif event.type == pg.QUIT:	run = False
 			pg.display.update()
 		return screen
