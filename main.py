@@ -27,6 +27,7 @@ def play():
 		for event in pg.event.get():
 			if event.type == pg.QUIT: run = False
 			if event.type == pg.MOUSEBUTTONDOWN:
+				CLICK_SOUND.play()
 				screen = None
 				xy = pg.mouse.get_pos()
 				x, y = xy[0], xy[1]

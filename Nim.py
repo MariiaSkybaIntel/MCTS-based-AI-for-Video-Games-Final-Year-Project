@@ -215,7 +215,7 @@ class Nim(Game, GameGUIInterface):
 		game_over = False
 		game_info_visible = False
 		#set volume for background music and sounds
-		NIM_BGR_MUSIC.set_volume(0.3)
+		NIM_BGR_MUSIC.set_volume(0.1)
 		CLICK_SOUND.set_volume(0.3)
 		NIM_WINNING_SOUND.set_volume(0.4)
 		NIM_BUBBLE_POP_SOUND.set_volume(0.4)
@@ -272,6 +272,8 @@ class Nim(Game, GameGUIInterface):
 							self.do_move(len(selected_bubbles))
 							#remove bubbles from screen
 							for i in selected_bubbles:
+								NIM_BUBBLE_POP_SOUND.play()
+								time.sleep(0.1)
 								self.board[i] = 0
 							selected_bubbles = []
 							all_bubbles = []
@@ -309,9 +311,8 @@ class Nim(Game, GameGUIInterface):
 						game_info_visible = False
 					elif self.quit_game_btn_clicked(x, y) and not game_info_visible:						
 						NIM_BGR_MUSIC.stop()
-						pg.mixer.Channel(0).play(MAIN_MUSIC_THEME, -1)
-						#reset game
-						self.bubbles = NIM_DEFAULT_NUM_OF_OBJECTS
+						pg.mixer.Channel(0).play(MAIN_MUSIC_THEME, -1)						
+						self.bubbles = NIM_DEFAULT_NUM_OF_OBJECTS #reset game
 						self.player_just_moved = 2
 						game_over = False
 						run = False
