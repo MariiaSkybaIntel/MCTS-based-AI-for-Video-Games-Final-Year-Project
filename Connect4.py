@@ -11,8 +11,8 @@ from UCT import UCT
 class Connect4(Game, GameGUIInterface):
 	""" Connect4 is played on 6x7 board arranges as below
 
-	  col:    0  1  2  3  4  5  6
-  row: 0   [[ 0  0  0  0  0  0  0]
+	 row: col:0  1  2  3  4  5  6
+           0   [[ 0  0  0  0  0  0  0]
 	   1    [ 0  0  0  0  0  0  0]
 	   2    [ 0  0  0  0  0  0  0]
 	   3    [ 0  0  0  0  0  0  0]
