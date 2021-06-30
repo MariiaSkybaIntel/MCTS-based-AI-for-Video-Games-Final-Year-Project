@@ -1,5 +1,4 @@
-# MCTS-for-Video-Games
-## Maynooth University CSSE course Final Year Project
+# MCTS-for-Video-Games - CSSE course Final Year Project
 
 MCTS belongs to the family of search algorithms used in the Artificial Intelligence domain of Computer Science. It uses Monte Carlo simulations to find optimal actions by drawing random samples from the decision space and can be used for any problem that can be modelled as {state: action} set of pairs. 
 
