@@ -14,26 +14,26 @@ In Reinforcement Learning an intelligent agent is always trying to expand tree n
 
 <img src= "https://github.com/cmulation/MCTS-for-Video-Games-Final-Year-Project/blob/main/MCTS_steps.jpg" width="700" height="400"/>
 
-**Prerequisites:**
+## Prerequisites:
 1. Install Python 3: https://www.python.org/downloads/
 2. Install Pygame: pip install pygame
 3. Install Numpy: pip install numpy
 
 
-**TO PLAY GAMES:**
+## To play games:
 A selection of 5 games was developed for this project: OXO, Nim, Connect4, Othello and Checkers. Each game has an info button where you can get familiar with the rules. 
 supporting -> mcts_games -> MCTS games.exe   OR
 main.py (line 62) -> uncomment mode = Modes.PLAY  -> Run
 
 
-**TO RUN MCTS TESTS:**
+## To run MCTS tests:
 Testing was done to measure MCTS-based AI performance. These tests can be run the following way:
 1. MCTSTest.py (lines 39-46) -> uncomment desired game and test_type 
 							 -> set number of simulations (line 47)
 							 -> set number of games (line 77) 
 2. main.py (line 63) -> uncomment mode = Modes.TEST_MCTS -> Run
 
-**TO RUN UNIT TESTS:**
+## To run unit tests:
 main.py (line 64) -> uncomment mode = Modes.TEST_MCTS -> Run
 
 ## Games GUI
