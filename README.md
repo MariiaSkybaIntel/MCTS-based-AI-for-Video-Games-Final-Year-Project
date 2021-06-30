@@ -21,7 +21,10 @@ In Reinforcement Learning an intelligent agent is always trying to expand tree n
 
 
 ## To play games:
-A selection of 5 games was developed for this project: OXO, Nim, Connect4, Othello and Checkers. Each game has an info button where you can get familiar with the rules. 
+A selection of 5 games was developed for this project: OXO, Nim, Connect4, Othello and Checkers. Each game has an info button where you can get familiar with the rules.
+
+To play:
+
 supporting -> mcts_games -> MCTS games.exe   OR
 main.py (line 62) -> uncomment mode = Modes.PLAY  -> Run
 
